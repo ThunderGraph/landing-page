@@ -26,12 +26,13 @@ export const metadata = {
   charSet: "utf-8",
   keywords: "AI, requirements, aerospace, manufacturing, energy, engineering, systems engineering, product managers, collaboration, copilot, automation",
   author: "ThunderGraph Team",
+  images: "/images/logo.png",
   openGraph: {
     type: "website",
     url: "https://www.thundergraph.com/",
     title: "ThunderGraph - Requirements done right, right when you need them",
     description: "An AI software that generates requirements for engineer hardware companies in aerospace, energy, and manufacturing industries. It is a tool that lets engineers and product managers collaborate with AI to write requirements documentation fast and reliably.",
-    image: "/images/logo.png"
+    images: "/images/logo.png"
   },
   favicon: "/images/favicon.ico"
 };
@@ -43,23 +44,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
-        <title>ThunderGraph - Requirements done right, right when you need them.</title>
-        <meta name='description' content='An AI software that generates requirements for engineer hardware companies in aerospace, energy, and manufacturing industries. It is a tool that lets engineers and product managers collaborate with AI to write requirements documentation fast and reliably.'/>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta charSet="utf-8" />
-        <meta name="description" content='An AI software that generates requirements for engineer hardware companies in aerospace, energy, and manufacturing industries. It is a tool that lets engineers and product managers collaborate with AI to write requirements documentation fast and reliably.' />
-        <meta name="keywords" content="AI, requirements, aerospace, manufacturing, energy, engineering, systems engineering, product managers, collaboration, copilot, automation" />
-        <meta name="author" content="ThunderGraph Team" />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.thundergraph.com/" />
-        <meta property="og:title" content="ThunderGraph - Requirements done right, right when you need them" />
-        <meta property="og:description" content='An AI software that generates requirements for engineer hardware companies in aerospace, energy, and manufacturing industries. It is a tool that lets engineers and product managers collaborate with AI to write requirements documentation fast and reliably.' />
-        <meta property="og:image" content="https://www.thundergraph.com/og-image.jpg" />
-
-        <link rel="icon" href="/images/favicon.ico" />
-      </Head>
       <body className={`${inter.variable} ${architects_daughter.variable} font-inter antialiased bg-slate-900 text-gray-200 tracking-tight`}>
         <div className="flex flex-col min-h-screen overflow-hidden">
           <Header />
