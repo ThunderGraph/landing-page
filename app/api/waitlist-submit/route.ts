@@ -15,7 +15,6 @@ export async function POST(request: NextRequest) {
         email: formData.email,
         company: formData.organization,
         jobtitle: formData.jobTitle,
-        industry: formData.industry
       },
       associations: []
     };

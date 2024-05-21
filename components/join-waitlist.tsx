@@ -14,7 +14,6 @@ const JoinWaitlistForm = ({ closeModal }: JoinWaitlistFormProps) => {
       email: target.email.value,
       organization: target.organization.value,
       jobTitle: target.jobTitle.value,
-      industry: target.industry.value
     };
 
     const response = await fetch('/api/waitlist-submit', {
@@ -31,6 +30,9 @@ const JoinWaitlistForm = ({ closeModal }: JoinWaitlistFormProps) => {
     } else {
       console.error('Failed to submit contact to HubSpot');
     }
+
+    window.location.href = '/api/auth/signup';
+
   };
 
   // Ref for the form modal
@@ -75,7 +77,7 @@ const JoinWaitlistForm = ({ closeModal }: JoinWaitlistFormProps) => {
           <input type="text" id="jobTitle" name="jobTitle" required className="shadow appearance-none border rounded w-full py-2 px-3 bg-slate-900 text-cyan-200 leading-tight focus:outline-none focus:shadow-outline" />
         </div>
         <div className='px-4 py-2'>
-          <button type="submit" className="bg-cyan-300 hover:bg-cyan-200 text-blue-950 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Submit</button>
+          <button type="submit" className="bg-cyan-300 hover:bg-cyan-200 text-blue-950 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Signup</button>
         </div>
       </form>
     </div>

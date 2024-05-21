@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@auth0/nextjs-auth0": "^3.5.0",
     "@headlessui/react": "^1.7.17",
     "@hubspot/api-client": "^11.1.0",
     "@types/node": "^20.10.4",

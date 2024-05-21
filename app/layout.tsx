@@ -27,6 +27,11 @@ export const metadata = {
   keywords: "AI, requirements, aerospace, manufacturing, energy, engineering, systems engineering, product managers, collaboration, copilot, automation",
   author: "ThunderGraph Team",
   images: "/images/logo.png",
+  metadataBase: 'https://www.thundergraph.ai',
+  // metadataBase: 'http://localhost:3001',
+  icons: {
+    icon: "/images/favicon.ico"
+  },
   openGraph: {
     type: "website",
     url: "https://www.thundergraph.com/",
@@ -44,6 +49,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/images/favicon.ico" sizes="any" />
+      </head>
       <body className={`${inter.variable} ${architects_daughter.variable} font-inter antialiased bg-slate-900 text-gray-200 tracking-tight`}>
         <div className="flex flex-col min-h-screen overflow-hidden">
           <Header />
