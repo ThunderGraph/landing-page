@@ -1,12 +1,37 @@
+'use client'
+import React, { useState } from 'react';
+
 export default function Newsletter() {
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setStatus('idle'); // Reset status before submission
+    try {
+      const response = await fetch('/api/newsletter-submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        setEmail(''); // Clear the email input
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      setStatus('error');
+    }
+  };
+
   return (
     <section>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-
-        {/* CTA box */}
         <div className="relative bg-blue-950 py-10 px-8 md:py-16 md:px-12" data-aos="fade-up">
-
-          {/* Background illustration */}
           <div className="absolute right-0 top-0 -ml-40 pointer-events-none" aria-hidden="true">
             <svg width="238" height="110" fill="none" xmlns="http://www.w3.org/2000/svg">
               <defs>
@@ -28,13 +53,18 @@ export default function Newsletter() {
             </div>
 
             {/* CTA form */}
-            <form className="w-full lg:w-1/2">
+            <form onSubmit={handleSubmit} className="w-full lg:w-1/2">
               <div className="flex flex-col sm:flex-row justify-center max-w-xs mx-auto sm:max-w-md lg:max-w-none">
-                <input type="email" className="w-full appearance-none bg-slate-900 border border-cyan-300 focus:border-cyan-200 rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-cyan-400" placeholder="Your best email…" aria-label="Your best email…" />
-                <a className="btn border-cyan-300 text-cyan-300 hover:bg-blue-600 shadow" href="#0">Subscribe</a>
+                <input type="email" className="w-full appearance-none bg-slate-900 border border-cyan-300 focus:border-cyan-200 rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-cyan-400" placeholder="Your best email…" aria-label="Your best email…" value={email} onChange={(e) => setEmail(e.target.value)} required />
+                <button type="submit" className="btn border-cyan-300 text-cyan-300 hover:bg-blue-600 shadow">Subscribe</button>
               </div>
               {/* Success message */}
-              {/* <p className="text-center lg:text-left lg:absolute mt-2 opacity-75 text-sm">Thanks for subscribing!</p> */}
+              {status === 'success' && (
+                <p className="text-center text-cyan-300 mt-4">Email submitted successfully!</p>
+              )}
+              {status === 'error' && (
+                <p className="text-center text-red-500 mt-4">Failed to submit email. Please try again.</p>
+              )}
             </form>
 
           </div>

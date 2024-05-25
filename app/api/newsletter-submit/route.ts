@@ -10,12 +10,12 @@ export async function POST(request: NextRequest) {
   try {
     const contactObj = {
       properties: {
-        firstname: formData.firstName,
-        lastname: formData.lastName,
+        // firstname: formData.firstName,
+        // lastname: formData.lastName,
         email: formData.email,
-        company: formData.organization,
-        jobtitle: formData.jobTitle,
-        engagementtype: 'BetaWaitlist'
+        // company: formData.organization,
+        // jobtitle: formData.jobTitle,
+        engagementtype: 'Newsletter'
       },
       associations: []
     };

@@ -26,6 +26,7 @@ const JoinWaitlistForm = ({ closeModal }: JoinWaitlistFormProps) => {
 
     if (response.ok) {
       console.log('Contact submitted to HubSpot');
+      
       closeModal(); // Close modal on successful submission
     } else {
       console.error('Failed to submit contact to HubSpot');
