@@ -27,8 +27,14 @@ export default function ModalVideo({
   return (
     <div>
       {/* Video thumbnail */}
-      <div className="relative flex justify-center items-center" data-aos="fade-up" data-aos-delay="200">
-        <Image src={thumb} width={thumbWidth} height={thumbHeight} alt={thumbAlt} />
+      <div className="relative flex justify-center items-center max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+        <Image 
+          src={thumb} 
+          width={thumbWidth} 
+          height={thumbHeight} 
+          alt={thumbAlt}
+          className="w-full h-auto" // This ensures the image is responsive
+        />
         <button className="absolute group" onClick={() => { setModalOpen(true) }} aria-label="Watch the video">
           <svg className="w-16 h-16 sm:w-20 sm:h-20 hover:opacity-75 transition duration-150 ease-in-out" viewBox="0 0 88 88" xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -72,9 +78,8 @@ export default function ModalVideo({
             <div className="flex items-center justify-center w-full h-full">
               <Dialog.Panel className="bg-black overflow-hidden" style={{ width: '75vw', height: '75vh' }}>
                 <iframe
-                  style={{ width: '100%', height: '100%' }}
-                  src="https://www.youtube.com/embed/1OOYiPG9G_o?autoplay=1"
-                  frameBorder="0"
+                  style={{ width: '100%', height: '100%', border: 'none' }}
+                  src="https://youtube.com/embed/Sf8wK4gCwPs?vq=hd1080"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
