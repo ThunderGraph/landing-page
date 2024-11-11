@@ -79,7 +79,7 @@ export default function ModalVideo({
               <Dialog.Panel className="bg-black overflow-hidden" style={{ width: '75vw', height: '75vh' }}>
                 <iframe
                   style={{ width: '100%', height: '100%', border: 'none' }}
-                  src="https://youtube.com/embed/ztcp_AdOoJg?vq=hd1080"
+                  src="https://youtube.com/embed/NqxAdcQK6Wg?vq=hd1080"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>

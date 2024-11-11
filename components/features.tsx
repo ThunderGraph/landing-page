@@ -115,7 +115,7 @@ export default function Features() {
                 </g>
               </svg>
               <h4 className="h4 mb-2 text-center">Manage Different Projects on One Platform</h4>
-              <p className="text-lg text-gray-400 text-center">ThunderGraph's interface lets users create, edit, and switch between projects without comprimising data security.</p>
+              <p className="text-lg text-gray-400 text-center">ThunderGraph's interface lets users create, edit, and switch between projects without compromising data security.</p>
             </div>
           </div>
         </div>
