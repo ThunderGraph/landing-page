@@ -1,3 +1,21 @@
+:root {
+  --foreground-rgb: 220, 220, 220;
+  --background-start-rgb: 38,42,55;
+  --background-start: #263037;
+  --background-end-rgb: 38,42,55;
+  --background-primary-rgb: 11, 22, 33;
+  /* --form-color: #262A37; */
+  --form-color: #222337;
+  /* --background-primary-color: #0B1621; */
+  --background-primary-color: #0b0d21;
+  --dark-border-color: #302641;
+  --light-border-color: #4b18a3;
+  --primary-button-gradient: linear-gradient(135deg, #6fd0e1 0%, #8d53f0 100%);
+  --primary-button-color: #6fd0e1;
+  --requirements-color: #cf00ff;
+  --delete-button-color: #f92283b9;
+}
+
 .form-input:focus,
 .form-textarea:focus,
 .form-multiselect:focus,

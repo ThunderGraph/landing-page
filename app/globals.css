@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --foreground-rgb: 220, 220, 220;
+  --background-start-rgb: 38,42,55;
+  --background-start: #263037;
+  --background-end-rgb: 38,42,55;
+  --background-primary-rgb: 11, 22, 33;
+  /* --form-color: #262A37; */
+  --form-color: #222337;
+  /* --background-primary-color: #0B1621; */
+  --background-primary-color: #0b0d21;
+  --dark-border-color: #302641;
+  --light-border-color: #4b18a3;
+  --primary-button-gradient: linear-gradient(135deg, #6fd0e1 0%, #8d53f0 100%);
+  --primary-button-color: #6fd0e1;
+  --requirements-color: #cf00ff;
+  --delete-button-color: #f92283b9;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color: #0B1621;
+  height: 100%;
+  overflow: hidden;
+  /* background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb)); */
+}
+
+
+.layout-container{
+  background-color: var(--form-color);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+.pageTitle{
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.app-layout {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+}
+
+.sidebar {
+  grid-row: span 2;
+}
+
+.header {
+  grid-column: 2;
+}
+
+.content {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+  /* General button styling */
+  .button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    min-width: fit-content;
+  }
+  
+  .button:hover {
+    opacity: 0.8; /* Slight transparency on hover for visual feedback */
+  }
+  
+  /* Specific styling for the Delete button */
+  .buttonDelete {
+    color: var(--delete-button-color); 
+    background-color: transparent;
+    border: 1px solid var(--delete-button-color);
+    font-weight: bold;
+  }
+  
+  /* Styling for the Save button */
+  .buttonSave {
+    background: var(--primary-button-gradient);
+    color: var(--background-primary-color);
+    font-weight: bold;
+  }
+  
+  /* Styling for the Cancel button */
+  .buttonCancel {
+    position: relative;
+    background: transparent;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: var(--primary-button-gradient);
+  }
+
+  .buttonCancel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 5px;
+    padding: 1px; /* This creates the border thickness */
+    background: var(--primary-button-gradient);
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+
+
+
+/* .fileupload {
+  background-color: rgb(var(--background-secondary-rgb));
+  border-radius: 5px;
+} */
+

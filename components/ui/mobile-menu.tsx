@@ -60,6 +60,24 @@ export default function MobileMenu() {
         style={mobileNavOpen ? { maxHeight: mobileNav.current?.scrollHeight, opacity: 1 } : { maxHeight: 0, opacity: 0.8 }}
       >
         <ul className="bg-gray-800 px-4 py-2">
+          <li className="my-2">
+            <Link 
+              href="/" 
+              className="flex font-medium w-full text-purple-500 hover:text-purple-400 py-2 px-3 justify-center rounded-lg" 
+              onClick={() => setMobileNavOpen(false)}
+            >
+              Home
+            </Link>
+          </li>
+          <li className="my-2">
+            <Link 
+              href="/blog" 
+              className="flex font-medium w-full text-purple-500 hover:text-purple-400 py-2 px-3 justify-center rounded-lg" 
+              onClick={() => setMobileNavOpen(false)}
+            >
+              Blog
+            </Link>
+          </li>
           <li>
             <Link href="https://thundergraph-fe5b7f96ed2c.herokuapp.com/" className="flex font-medium w-full text-purple-600 hover:text-gray-200 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
               Sign in

@@ -19,9 +19,29 @@ export default function Header() {
 
           {/* Desktop navigation */}
           <nav className="hidden md:flex md:grow">
+            {/* Desktop menu links */}
+            <ul className="flex grow justify-start flex-wrap items-center">
+              <li className="mr-2">
+                <Link
+                  href="/"
+                  className="font-medium text-purple-500 hover:text-purple-400 px-4 py-2 flex items-center transition duration-150 ease-in-out rounded-lg"
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blog"
+                  className="font-medium text-purple-500 hover:text-purple-400 px-4 py-2 flex items-center transition duration-150 ease-in-out rounded-lg"
+                >
+                  Blog
+                </Link>
+              </li>
+            </ul>
+            
             {/* Desktop sign in links */}
             <ul className="flex grow justify-end flex-wrap items-center">
-              <li>
+              {/* <li>
                 <Link
                   href="https://thundergraph-fe5b7f96ed2c.herokuapp.com/"
                   className="mt-5 font-bold border-cyan-300 text-cyan-300 hover:text-cyan-200 hover:border-cyan-200 hover:bg-blue-600 px-4 py-3 flex items-center transition duration-150 ease-in-out border-2 rounded-lg"
@@ -30,7 +50,7 @@ export default function Header() {
                 >
                   Sign in
                 </Link>
-              </li>
+              </li> */}
               {/* <li>
                 <Link href="/signup" className="font-bold text-blue-950 bg-cyan-300 hover:bg-cyan-700 px-4 py-3 flex items-center transition duration-150 ease-in-out rounded-lg ml-3">
                   Sign up

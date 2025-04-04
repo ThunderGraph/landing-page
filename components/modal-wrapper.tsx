@@ -10,7 +10,9 @@ export default function ClientModal({ children }: React.PropsWithChildren<{}>) {
 
   return (
     <>
-      <button onClick={handleOpen} className="bg-cyan-300 hover:bg-cyan-200 text-blue-950 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" >Join Waitlist</button>
+      <div onClick={handleOpen} className="cursor-pointer">
+        {children}
+      </div>
       <Suspense fallback={<div>Loading...</div>}>
         {isOpen && <Modal isOpen={isOpen} onClose={handleClose} />}
       </Suspense>
