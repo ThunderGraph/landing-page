@@ -30,7 +30,7 @@ export default function Hero() {
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
               <div data-aos="fade-up" data-aos-delay="400">
                 <ClientModal>
-                  <BasicButton className="text-slate-900 font-semibold py-2 px-6">Join Waitlist</BasicButton>
+                  <BasicButton className="text-slate-900 font-semibold py-2 px-6">Request A Demo</BasicButton>
                 </ClientModal>
               </div>
             </div>
