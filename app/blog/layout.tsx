@@ -26,7 +26,7 @@ export default function BlogLayout({
         <PageIllustration />
         {children}
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 } 
