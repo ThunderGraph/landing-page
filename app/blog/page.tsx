@@ -57,6 +57,42 @@ export default function Blog() {
                   </div>
                 </footer>
               </article>
+
+              {/* Design Partner Perspective Blog post */}
+              <article className="flex flex-col h-full" data-aos="fade-up" data-aos-delay="100">
+                <header>
+                  <Link href="/blog/design-partner-perspective" className="block mb-6">
+                    <div className="relative h-0 pb-9/16 overflow-hidden rounded-sm">
+                      <Image 
+                        src="/images/blog/design-partner-perspective/workflowsAI.png"
+                        alt="Diagram showing AI reducing project complexity across various engineering disciplines"
+                        className="absolute inset-0 w-full h-full object-cover"
+                        width={500}
+                        height={280}
+                      />
+                    </div>
+                  </Link>
+                  <div className="mb-3">
+                    <ul className="flex flex-wrap text-xs font-medium -m-1">
+                      <li className="m-1">
+                        <span className="inline-flex text-center text-xs font-medium py-1 px-3 rounded-full bg-purple-600 text-white">AI</span>
+                      </li>
+                      <li className="m-1">
+                        <span className="inline-flex text-center text-xs font-medium py-1 px-3 rounded-full bg-green-700 text-white">Collaboration</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <h3 className="h4 mb-2">
+                    <Link href="/blog/design-partner-perspective" className="hover:text-gray-100 transition duration-150 ease-in-out">Enhancing Systems Engineering Workflows with AI: A Design Partner's Perspective</Link>
+                  </h3>
+                </header>
+                <p className="text-lg text-gray-400 grow">Insights from a design partner on how ThunderGraph's AI automation is transforming systems engineering processes...</p>
+                <footer className="flex items-center mt-4">
+                  <div className="text-sm text-gray-500">
+                    <span>May 4, 2025</span>
+                  </div>
+                </footer>
+              </article>
               
             </div>
           </div>
