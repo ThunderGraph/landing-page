@@ -33,31 +33,33 @@ const JoinWaitlistForm = ({ closeModal }: JoinWaitlistFormProps) => {
       <div className="w-full max-w-screen-xl bg-slate-800 rounded-lg overflow-hidden">
         <div className="flex flex-col md:flex-row">
           {/* Main Content Column */}
-          <div className="w-full md:w-2/3 p-8 flex flex-col">
-            <h2 className="text-2xl font-bold text-center text-purple-400 mb-4">Schedule your personalized 1:1 demo</h2>
-            
-            <div className="flex items-center mb-8 justify-center space-x-4">
-              <div className="flex items-center">
-                <div className="w-8 h-8 rounded-full bg-purple-600 text-white flex items-center justify-center font-bold">1</div>
-                <span className="ml-2 text-gray-300">Click the button</span>
+          <div className="w-full md:w-2/3 p-8 flex flex-col justify-center">
+            <div className="pt-10">
+              <h2 className="text-2xl font-bold text-center text-purple-400 mb-6">Schedule your personalized 1:1 demo</h2>
+              
+              <div className="flex items-center mb-10 justify-center space-x-4">
+                <div className="flex items-center">
+                  <div className="w-8 h-8 rounded-full bg-purple-600 text-white flex items-center justify-center font-bold">1</div>
+                  <span className="ml-2 text-gray-300">Click the button</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-8 h-8 rounded-full bg-purple-600 text-white flex items-center justify-center font-bold">2</div>
+                  <span className="ml-2 text-gray-300">Book a time slot</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-8 h-8 rounded-full bg-purple-600 text-white flex items-center justify-center font-bold">3</div>
+                  <span className="ml-2 text-gray-300">Attend a demo</span>
+                </div>
               </div>
-              <div className="flex items-center">
-                <div className="w-8 h-8 rounded-full bg-purple-600 text-white flex items-center justify-center font-bold">2</div>
-                <span className="ml-2 text-gray-300">Book a time slot</span>
+              
+              <div className="flex justify-center mt-20 mb-16">
+                <button 
+                  onClick={handleScheduleDemo} 
+                  className="bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 px-6 rounded-lg focus:outline-none focus:shadow-outline flex items-center justify-center"
+                >
+                  Schedule your demo
+                </button>
               </div>
-              <div className="flex items-center">
-                <div className="w-8 h-8 rounded-full bg-purple-600 text-white flex items-center justify-center font-bold">3</div>
-                <span className="ml-2 text-gray-300">Attend a demo</span>
-              </div>
-            </div>
-            
-            <div className="flex justify-center mt-24 mb-10">
-              <button 
-                onClick={handleScheduleDemo} 
-                className="bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 px-6 rounded-lg focus:outline-none focus:shadow-outline flex items-center justify-center"
-              >
-                Schedule your demo
-              </button>
             </div>
             
             {/* <div className="mt-6 text-center text-xs text-gray-400">
