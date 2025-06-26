@@ -22,6 +22,78 @@ export default function Blog() {
           <div className="max-w-sm mx-auto md:max-w-none">
             <div className="grid gap-12 md:grid-cols-3 md:gap-x-6 md:gap-y-8 items-start">
               
+              {/* AI Traceability Blog post */}
+              <article className="flex flex-col h-full" data-aos="fade-up">
+                <header>
+                  <Link href="/blog/ai-traceability" className="block mb-6">
+                    <div className="relative h-0 pb-9/16 overflow-hidden rounded-sm">
+                      <Image 
+                        src="/images/automaticTraceability.png"
+                        alt="Responsible AI and Traceability in Systems Engineering"
+                        className="absolute inset-0 w-full h-full object-cover"
+                        width={500}
+                        height={280}
+                      />
+                    </div>
+                  </Link>
+                  <div className="mb-3">
+                    <ul className="flex flex-wrap text-xs font-medium -m-1">
+                      <li className="m-1">
+                        <span className="inline-flex text-center text-xs font-medium py-1 px-3 rounded-full bg-purple-600 text-white">AI</span>
+                      </li>
+                      <li className="m-1">
+                        <span className="inline-flex text-center text-xs font-medium py-1 px-3 rounded-full bg-cyan-500 text-white">Traceability</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <h3 className="h4 mb-2">
+                    <Link href="/blog/ai-traceability" className="hover:text-gray-100 transition duration-150 ease-in-out">Responsible AI and Traceability in Systems Engineering</Link>
+                  </h3>
+                </header>
+                <p className="text-lg text-gray-400 grow">Explore how traceability is becoming central to responsible AI in systems engineering, ensuring compliance, transparency, and continuous improvement in complex engineered systems.</p>
+                <footer className="flex items-center mt-4">
+                  <div className="text-sm text-gray-500">
+                    <span>June 15, 2025</span>
+                  </div>
+                </footer>
+              </article>
+
+              {/* Partner Perspective Blog post */}
+              <article className="flex flex-col h-full" data-aos="fade-up">
+                <header>
+                  <Link href="/blog/partner-perspective" className="block mb-6">
+                    <div className="relative h-0 pb-9/16 overflow-hidden rounded-sm">
+                      <Image 
+                        src="/images/ai-collaboration.png"
+                        alt="AI Automation in Systems Engineering"
+                        className="absolute inset-0 w-full h-full object-cover"
+                        width={500}
+                        height={280}
+                      />
+                    </div>
+                  </Link>
+                  <div className="mb-3">
+                    <ul className="flex flex-wrap text-xs font-medium -m-1">
+                      <li className="m-1">
+                        <span className="inline-flex text-center text-xs font-medium py-1 px-3 rounded-full bg-purple-600 text-white">AI</span>
+                      </li>
+                      <li className="m-1">
+                        <span className="inline-flex text-center text-xs font-medium py-1 px-3 rounded-full bg-green-500 text-white">Partnership</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <h3 className="h4 mb-2">
+                    <Link href="/blog/partner-perspective" className="hover:text-gray-100 transition duration-150 ease-in-out">Enhancing Systems Engineering Workflows with AI Automation: A Design Partner's Perspective</Link>
+                  </h3>
+                </header>
+                <p className="text-lg text-gray-400 grow">Insights from our design partners on how AI automation is transforming systems engineering processes, making them more scalable, efficient, and effective.</p>
+                <footer className="flex items-center mt-4">
+                  <div className="text-sm text-gray-500">
+                    <span>May 11, 2025</span>
+                  </div>
+                </footer>
+              </article>
+
               {/* MBSE Blog post */}
               <article className="flex flex-col h-full" data-aos="fade-up">
                 <header>
